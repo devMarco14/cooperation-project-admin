@@ -2,11 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Main = () => {
-  return (
-    <>
-      <StyledHeader>hello world</StyledHeader>
-    </>
-  );
+  return <StyledHeader>hello world</StyledHeader>;
 };
 
 const StyledHeader = styled.div`
