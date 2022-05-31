@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
 import SiderButtons from './components/SiderButton';
-import CityInfo from './CityInfo';
+import CityInfo from '../CityInfo';
 import EvTextInfo from './components/EvTextInfo';
 
 const Sider = () => {

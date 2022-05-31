@@ -6,7 +6,7 @@ const Contents = () => {
   return (
     <StyledContents>
       <Header />
-      contents
+      <div>123</div>
     </StyledContents>
   );
 };
