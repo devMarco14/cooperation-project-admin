@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import DonutGraph from './components/DonutGraph';
 import Header from './Header';
 
 const Contents = () => {
   return (
     <StyledContents>
       <Header />
-      <div>123</div>
+      <DonutGraph />
     </StyledContents>
   );
 };
