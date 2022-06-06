@@ -36,7 +36,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  border: 1px solid black;
+  box-shadow: 1px 0 3px 1px #dadce0;
 `;
 
 const StyledHeaderIcon = styled.div`

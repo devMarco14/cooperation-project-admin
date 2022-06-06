@@ -60,7 +60,10 @@ const PastData = () => {
 
 const StyledPastData = styled.div`
   width: 70%;
-  border: 1px solid black;
+  height: 230px;
+  :hover {
+    box-shadow: 1px 1px 3px 3px #dadce0;
+  }
 `;
 
 const StyledChart = styled(ECharts)`

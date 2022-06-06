@@ -2,19 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import DonutGraph from './components/DonutGraph';
 import PastData from './components/PastData';
+import RateOfChange from './components/RateOfChange';
 import TotalBarGraph from './components/TotalBarGraph';
 import Header from './Header';
 
-const Contents = () => {
+const Contents = ({ data }) => {
   return (
     <StyledContents>
       <Header />
       <StyledTopGraph>
-        <DonutGraph />
-        <TotalBarGraph />
+        <DonutGraph data={data} />
+        <TotalBarGraph data={data} />
       </StyledTopGraph>
       <StyledBottomGraph>
         <PastData />
+        <RateOfChange />
       </StyledBottomGraph>
     </StyledContents>
   );
@@ -23,7 +25,6 @@ const Contents = () => {
 const StyledContents = styled.section`
   width: 80vw;
   height: 100vh;
-  border: 1px solid black;
 `;
 
 const StyledTopGraph = styled.div`

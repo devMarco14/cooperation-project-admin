@@ -3,17 +3,32 @@ import styled from 'styled-components';
 import { Progress } from 'antd';
 import 'antd/dist/antd.css';
 
-const DonutGraph = () => {
+const DonutGraph = ({ data }) => {
+  const {
+    charging_charger,
+    communication_abnomal_charger,
+    inspecting_charger,
+    not_confirmed_charger,
+    ready_charger,
+    suspending_charger,
+    total_charger,
+  } = data;
+
   return (
     <StyledGraphBox>
       <StyledGraphText>
-        <StyledGraph type="circle" percent={30} width={150} strokeWidth={10} />
+        <StyledGraph
+          type="circle"
+          percent={Math.round((ready_charger / total_charger) * 100)}
+          width={150}
+          strokeWidth={10}
+        />
         <StyledText>충전대기</StyledText>
       </StyledGraphText>
       <StyledGraphText>
         <StyledGraph
           type="circle"
-          percent={40}
+          percent={Math.round((charging_charger / total_charger) * 100)}
           width={150}
           strokeWidth={10}
           strokeColor="green"
@@ -23,7 +38,7 @@ const DonutGraph = () => {
       <StyledGraphText>
         <StyledGraph
           type="circle"
-          percent={10}
+          percent={Math.round((inspecting_charger / total_charger) * 100)}
           width={150}
           strokeWidth={10}
           strokeColor="orange"
@@ -33,7 +48,7 @@ const DonutGraph = () => {
       <StyledGraphText>
         <StyledGraph
           type="circle"
-          percent={5}
+          percent={Math.round((suspending_charger / total_charger) * 100)}
           width={150}
           strokeWidth={10}
           strokeColor="red"
@@ -43,7 +58,9 @@ const DonutGraph = () => {
       <StyledGraphText>
         <StyledGraph
           type="circle"
-          percent={5}
+          percent={Math.round(
+            (communication_abnomal_charger / total_charger) * 100
+          )}
           width={150}
           strokeWidth={10}
           strokeColor="yellow"
@@ -53,7 +70,7 @@ const DonutGraph = () => {
       <StyledGraphText>
         <StyledGraph
           type="circle"
-          percent={10}
+          percent={Math.round((not_confirmed_charger / total_charger) * 100)}
           width={150}
           strokeWidth={10}
           strokeColor="yellow"
@@ -68,7 +85,9 @@ const StyledGraphBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 70%;
-  border: 1px solid black;
+  :hover {
+    box-shadow: 1px 1px 3px 3px #dadce0;
+  }
 `;
 
 const StyledGraphText = styled.div`
