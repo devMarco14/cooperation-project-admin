@@ -6,11 +6,11 @@ const RateOfChange = () => {
     <StyledROC>
       <StyledBox>
         <StyledAdd>
-          <div>EV기기 증가:</div>
+          <div>사용가능기기:</div>
           <div>10</div>
         </StyledAdd>
         <StyledDiminish>
-          <div>EV기기 감소:</div>
+          <div>사용불가기기:</div>
           <div>10</div>
         </StyledDiminish>
       </StyledBox>
@@ -34,7 +34,7 @@ const StyledBox = styled.div`
   border: 1px solid #969b9e;
   border-radius: 5px;
   color: #969b9e;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 const StyledAdd = styled.div`

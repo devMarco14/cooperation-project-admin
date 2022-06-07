@@ -5,45 +5,31 @@ import ECharts, { EChartsReactProps } from 'echarts-for-react';
 const PastData = () => {
   const [options, setOptions] = useState({
     xAxis: {
-      data: ['2 주전', '1 주전'],
+      type: 'category',
+      data: ['1주전', '2주전', '3주전', '4주전'],
     },
-    yAxis: {},
+
+    yAxis: {
+      type: 'value',
+    },
     series: [
       {
-        type: 'bar',
-        data: [
-          {
-            value: 60,
-            itemStyle: {
-              color: '#1690ff',
-            },
+        data: [180, 130, 190, 200],
+        type: 'line',
+        lineStyle: {
+          normal: {
+            color: 'blue',
           },
-          {
-            value: 70,
-            itemStyle: {
-              color: '#1690ff',
-            },
-          },
-        ],
-        barWidth: '10%',
+        },
       },
       {
-        type: 'bar',
-        data: [
-          {
-            value: 40,
-            itemStyle: {
-              color: 'red',
-            },
+        data: [120, 170, 110, 100],
+        type: 'line',
+        lineStyle: {
+          normal: {
+            color: 'red',
           },
-          {
-            value: 30,
-            itemStyle: {
-              color: 'red',
-            },
-          },
-        ],
-        barWidth: '10%',
+        },
       },
     ],
   });

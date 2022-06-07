@@ -1,5 +1,3 @@
-import { Spin } from 'antd';
-import { LoadingOutlined } from '@ant-design/icons';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,38 +16,46 @@ const EvTextInfo = ({ data }) => {
     <StyledEvInfo>
       <StyledEvCharger>
         <StyledInfo>전체 충전기:</StyledInfo>
-        {total_charger !== 0 && <StyledNumber>{total_charger}</StyledNumber>}
+        {total_charger !== 0 && (
+          <StyledNumber>{total_charger.toLocaleString()}</StyledNumber>
+        )}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>충전대기:</StyledInfo>
-        {total_charger !== 0 && <StyledNumber>{ready_charger}</StyledNumber>}
+        {total_charger !== 0 && (
+          <StyledNumber>{ready_charger.toLocaleString()}</StyledNumber>
+        )}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>충전중:</StyledInfo>
-        {total_charger !== 0 && <StyledNumber>{charging_charger}</StyledNumber>}
+        {total_charger !== 0 && (
+          <StyledNumber>{charging_charger.toLocaleString()}</StyledNumber>
+        )}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>점검중:</StyledInfo>
         {total_charger !== 0 && (
-          <StyledNumber>{inspecting_charger}</StyledNumber>
+          <StyledNumber>{inspecting_charger.toLocaleString()}</StyledNumber>
         )}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>운영중지:</StyledInfo>
         {total_charger !== 0 && (
-          <StyledNumber>{suspending_charger}</StyledNumber>
+          <StyledNumber>{suspending_charger.toLocaleString()}</StyledNumber>
         )}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>통신이상:</StyledInfo>
         {total_charger !== 0 && (
-          <StyledNumber>{communication_abnomal_charger}</StyledNumber>
+          <StyledNumber>
+            {communication_abnomal_charger.toLocaleString()}
+          </StyledNumber>
         )}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>상태미확인:</StyledInfo>
         {total_charger !== 0 && (
-          <StyledNumber>{not_confirmed_charger}</StyledNumber>
+          <StyledNumber>{not_confirmed_charger.toLocaleString()}</StyledNumber>
         )}
       </StyledEvCharger>
     </StyledEvInfo>
