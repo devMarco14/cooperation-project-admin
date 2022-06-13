@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Sider from './Sider';
-import Contents from './Contents';
+
+import MainContents from './MainContents';
 
 const Main = () => {
   const [dataList, setDataList] = useState({
@@ -14,6 +15,15 @@ const Main = () => {
     not_confirmed_charger: 0,
   });
 
+  // const fc = setTimeout(() => {
+  //   sdkfhjaksldjhflkasdhjfkljashfklsdf
+
+  //     if(sdlkfjlksdf) break
+  //   setTimeout(fc, 300)
+  // }, 300);
+
+  // fc()
+
   useEffect(() => {
     const fetchData = () => {
       fetch(
@@ -21,6 +31,9 @@ const Main = () => {
       )
         .then(res => res.json())
         .then(res => {
+          console.log('서울', res.results[0].chargers.count_of_status);
+          console.log('인천', res.results[1].chargers.count_of_status);
+          console.log('경기', res.results[2].chargers.count_of_status);
           let data = {
             total_charger: 0,
             communication_abnomal_charger: 0,
@@ -65,7 +78,7 @@ const Main = () => {
   return (
     <StyledMain>
       <Sider />
-      <Contents data={dataList} />
+      <MainContents data={dataList} />
     </StyledMain>
   );
 };

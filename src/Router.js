@@ -1,4 +1,3 @@
-import Sider from './pages/Sider';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Gyeonggi from './pages/Gyeonggi';
 import Incheon from './pages/Incheon';

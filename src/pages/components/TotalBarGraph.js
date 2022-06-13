@@ -81,20 +81,17 @@ const TotalBarGraph = ({ data }) => {
       <StyledEvTextInfo>
         <EvTextInfo data={data} />
       </StyledEvTextInfo>
-      <StyledCharts>
-        {options && (
-          <ECharts
-            option={options}
-            opts={{ renderer: 'svg', height: '300%' }}
-          />
-        )}
-      </StyledCharts>
+      {options && (
+        <StyledCharts>
+          <ECharts option={options} />
+        </StyledCharts>
+      )}
     </StyledTopBarGraph>
   );
 };
 
 const StyledTopBarGraph = styled.div`
-  width: 30%;
+  width: 40%;
 `;
 
 const StyledEvTextInfo = styled.div`
@@ -108,6 +105,7 @@ const StyledEvTextInfo = styled.div`
 
 const StyledCharts = styled.div`
   width: 100%;
+
   :hover {
     box-shadow: 1px 1px 3px 3px #dadce0;
   }

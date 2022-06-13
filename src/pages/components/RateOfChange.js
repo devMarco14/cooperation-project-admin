@@ -7,11 +7,11 @@ const RateOfChange = () => {
       <StyledBox>
         <StyledAdd>
           <div>사용가능기기:</div>
-          <div>10</div>
+          <div>12,800</div>
         </StyledAdd>
         <StyledDiminish>
           <div>사용불가기기:</div>
-          <div>10</div>
+          <div>8,800</div>
         </StyledDiminish>
       </StyledBox>
     </StyledROC>
@@ -21,7 +21,7 @@ const RateOfChange = () => {
 const StyledROC = styled.div`
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 40%;
   align-items: center;
   :hover {
     box-shadow: 1px 1px 3px 3px #dadce0;

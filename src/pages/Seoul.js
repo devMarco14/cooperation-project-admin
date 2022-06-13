@@ -40,3 +40,9 @@ const StyledMain = styled.section`
   width: 100vw;
 `;
 export default Seoul;
+
+// * {
+//   ::-webkit-scroller: none;
+//   scrollwer-width: 0;
+//   overflow-x: hidden;
+// }

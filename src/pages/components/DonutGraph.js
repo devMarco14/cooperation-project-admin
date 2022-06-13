@@ -85,9 +85,12 @@ const StyledGraphBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 70%;
+  /* 
   :hover {
     box-shadow: 1px 1px 3px 3px #dadce0;
-  }
+    width: 120%;
+    background-color: rgba(245, 245, 220, 0.5);
+  } */
 `;
 
 const StyledGraphText = styled.div`

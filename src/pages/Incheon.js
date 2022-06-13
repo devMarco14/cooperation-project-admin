@@ -14,8 +14,6 @@ const Incheon = () => {
     not_confirmed_charger: 0,
   });
 
-  console.log('dataList::', incheonDataList);
-
   useEffect(() => {
     const fetchData = () => {
       fetch('http://54.180.104.23:8000/evs/admin?regions=인천')

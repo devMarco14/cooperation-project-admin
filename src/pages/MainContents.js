@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import DonutGraph from './components/DonutGraph';
 import PastData from './components/PastData';
 import RateOfChange from './components/RateOfChange';
 import TotalBarGraph from './components/TotalBarGraph';
+import TotalPieGraph from './components/TotalPieGraph';
 import Header from './Header';
 
-const Contents = ({ data }) => {
+const MainContents = ({ data }) => {
   return (
     <StyledContents>
       <Header />
       <StyledTopGraph>
-        <DonutGraph data={data} />
+        <TotalPieGraph data={data} />
         <TotalBarGraph data={data} />
       </StyledTopGraph>
       <StyledBottomGraph>
@@ -34,4 +34,4 @@ const StyledTopGraph = styled.div`
 const StyledBottomGraph = styled.div`
   display: flex;
 `;
-export default Contents;
+export default MainContents;
