@@ -6,12 +6,17 @@ import TotalBarGraph from './components/TotalBarGraph';
 import TotalPieGraph from './components/TotalPieGraph';
 import Header from './Header';
 
-const MainContents = ({ data }) => {
+const MainContents = ({ data, seoul, gyeonggi, incheon }) => {
   return (
     <StyledContents>
       <Header />
       <StyledTopGraph>
-        <TotalPieGraph data={data} />
+        <TotalPieGraph
+          data={data}
+          seoul={seoul}
+          gyeonggi={gyeonggi}
+          incheon={incheon}
+        />
         <TotalBarGraph data={data} />
       </StyledTopGraph>
       <StyledBottomGraph>

@@ -2,17 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Sider from './Sider';
 import Contents from './Contents';
+import { initialData } from '../model/data';
 
 const Seoul = () => {
-  const [seoulDataList, setSeoulDataList] = useState({
-    total_charger: 0,
-    communication_abnomal_charger: 0,
-    ready_charger: 0,
-    charging_charger: 0,
-    suspending_charger: 0,
-    inspecting_charger: 0,
-    not_confirmed_charger: 0,
-  });
+  const [seoulDataList, setSeoulDataList] = useState(initialData);
 
   useEffect(() => {
     const fetchData = () => {

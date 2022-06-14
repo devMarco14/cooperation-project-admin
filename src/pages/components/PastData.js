@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import styled from 'styled-components';
-import ECharts, { EChartsReactProps } from 'echarts-for-react';
+import ECharts from 'echarts-for-react';
 
 const PastData = () => {
   const [options, setOptions] = useState({
@@ -14,7 +14,7 @@ const PastData = () => {
     },
     series: [
       {
-        data: [180, 130, 190, 200],
+        data: [80, 75, 85, 80],
         type: 'line',
         lineStyle: {
           normal: {
@@ -23,7 +23,7 @@ const PastData = () => {
         },
       },
       {
-        data: [120, 170, 110, 100],
+        data: [20, 25, 15, 20],
         type: 'line',
         lineStyle: {
           normal: {
@@ -36,10 +36,7 @@ const PastData = () => {
 
   return (
     <StyledPastData>
-      <StyledChart
-        option={options}
-        opts={{ renderer: 'svg', height: '250%' }}
-      />
+      <StyledChart option={options} />
     </StyledPastData>
   );
 };

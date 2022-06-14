@@ -3,17 +3,13 @@ import styled from 'styled-components';
 import Sider from './Sider';
 
 import MainContents from './MainContents';
+import { initialData } from '../model/data';
 
 const Main = () => {
-  const [dataList, setDataList] = useState({
-    total_charger: 0,
-    communication_abnomal_charger: 0,
-    ready_charger: 0,
-    charging_charger: 0,
-    suspending_charger: 0,
-    inspecting_charger: 0,
-    not_confirmed_charger: 0,
-  });
+  const [dataList, setDataList] = useState(initialData);
+  const [seoulData, setSeoulData] = useState(initialData);
+  const [gyeonggiData, setGyeonggiData] = useState(initialData);
+  const [incheonData, setIncheonData] = useState(initialData);
 
   // const fc = setTimeout(() => {
   //   sdkfhjaksldjhflkasdhjfkljashfklsdf
@@ -31,9 +27,6 @@ const Main = () => {
       )
         .then(res => res.json())
         .then(res => {
-          console.log('서울', res.results[0].chargers.count_of_status);
-          console.log('인천', res.results[1].chargers.count_of_status);
-          console.log('경기', res.results[2].chargers.count_of_status);
           let data = {
             total_charger: 0,
             communication_abnomal_charger: 0,
@@ -67,6 +60,9 @@ const Main = () => {
           });
 
           setDataList(data);
+          setSeoulData(res.results[0].chargers.count_of_status);
+          setGyeonggiData(res.results[2].chargers.count_of_status);
+          setIncheonData(res.results[1].chargers.count_of_status);
         });
     };
     fetchData();
@@ -78,7 +74,12 @@ const Main = () => {
   return (
     <StyledMain>
       <Sider />
-      <MainContents data={dataList} />
+      <MainContents
+        data={dataList}
+        seoul={seoulData}
+        gyeonggi={gyeonggiData}
+        incheon={incheonData}
+      />
     </StyledMain>
   );
 };
