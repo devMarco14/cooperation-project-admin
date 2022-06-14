@@ -9,7 +9,7 @@ const SiderButtons = ({ value }) => {
 
   const handleClick = () => {
     if (value.category_id === 4) {
-      navigate('/main');
+      navigate('/');
     } else if (value.category_id === 1) {
       navigate('/seoul');
     } else if (value.category_id === 2) {
