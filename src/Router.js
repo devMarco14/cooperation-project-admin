@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CafeInfo from './pages/CafeInfo';
 import Gyeonggi from './pages/Gyeonggi';
 import Incheon from './pages/Incheon';
 import Main from './pages/Main';
@@ -12,6 +13,7 @@ const Router = () => {
         <Route path="/seoul" element={<Seoul />} />
         <Route path="/gyeonggi" element={<Gyeonggi />} />
         <Route path="/incheon" element={<Incheon />} />
+        <Route path="/cafeinfo" element={<CafeInfo />} />
       </Routes>
     </BrowserRouter>
   );
