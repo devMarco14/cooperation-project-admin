@@ -2,9 +2,20 @@ import React from 'react';
 import { Button } from 'antd';
 import 'antd/dist/antd.css';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router';
 
 const HeaderButtons = ({ value }) => {
-  return <HeaderButton>{value.title}</HeaderButton>;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (value.id === 1) {
+      navigate('/');
+    } else {
+      navigate('/cafeinfo');
+    }
+  };
+
+  return <HeaderButton onClick={handleClick}>{value.title}</HeaderButton>;
 };
 
 const HeaderButton = styled(Button)`
