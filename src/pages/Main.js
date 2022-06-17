@@ -20,11 +20,11 @@ const Main = () => {
 
   // fc()
 
-  useEffect(() => {
-    const fetchData = () => {
-      fetch(
-        'https://maze-server.ml/evs/admin?regions=서울&regions=경기&regions=인천'
-      )
+  // useEffect(() => {
+  //   const fetchData = () => {
+  //     fetch(
+  //       'https://maze-server.ml/evs/admin?regions=서울&regions=경기&regions=인천'
+  //     )
         .then(res => res.json())
         .then(res => {
           let data = {

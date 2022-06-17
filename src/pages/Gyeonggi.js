@@ -7,19 +7,19 @@ import { initialData } from '../model/data';
 const Gyeonggi = () => {
   const [gyeonggiDataList, setGyeonggiDataList] = useState(initialData);
 
-  useEffect(() => {
-    const fetchData = () => {
-      fetch('https://maze-server.ml/evs/admin?regions=경기')
-        .then(res => res.json())
-        .then(res =>
-          setGyeonggiDataList(res.results[0].chargers.count_of_status)
-        );
-    };
-    fetchData();
-    setInterval(() => {
-      fetchData();
-    }, 60000);
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = () => {
+  //     fetch('https://maze-server.ml/evs/admin?regions=경기')
+  //       .then(res => res.json())
+  //       .then(res =>
+  //         setGyeonggiDataList(res.results[0].chargers.count_of_status)
+  //       );
+  //   };
+  //   fetchData();
+  //   setInterval(() => {
+  //     fetchData();
+  //   }, 60000);
+  // }, []);
 
   return (
     <StyledMain>

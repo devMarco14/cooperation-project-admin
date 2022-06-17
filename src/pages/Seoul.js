@@ -7,17 +7,17 @@ import { initialData } from '../model/data';
 const Seoul = () => {
   const [seoulDataList, setSeoulDataList] = useState(initialData);
 
-  useEffect(() => {
-    const fetchData = () => {
-      fetch('https://maze-server.ml/evs/admin?regions=서울')
-        .then(res => res.json())
-        .then(res => setSeoulDataList(res.results[0].chargers.count_of_status));
-    };
-    fetchData();
-    setInterval(() => {
-      fetchData();
-    }, 60000);
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = () => {
+  //     fetch('https://maze-server.ml/evs/admin?regions=서울')
+  //       .then(res => res.json())
+  //       .then(res => setSeoulDataList(res.results[0].chargers.count_of_status));
+  //   };
+  //   fetchData();
+  //   setInterval(() => {
+  //     fetchData();
+  //   }, 60000);
+  // }, []);
 
   return (
     <StyledMain>
