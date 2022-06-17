@@ -2,19 +2,14 @@
 
 ## 메이즈 주식회사
 - admin page 작업
+- 
 ## 작업내용
-- 초기 기획
-- 초기 세팅 작업
-- 들어갈 정보 미팅을 통해 정하기
-    - 현재 사용 가능한 기기, 불가한 기기, 충전중인 기기
-    - 서울, 인천, 경기 지역별로 나누기
-    - 과거와 현재의 사용현황 비교
-- 어떠한 데이터를 보여줄 지 생각하기 실시간 자료 목데이터로 가능
-- header 퍼블리싱
-- contents 퍼블리싱
-- text정보 상세내용
-- side bar 만들기 버튼, text 정보
-- sidebar 버튼에 routing으로 페이지 이동
-- db와 통신하여 연결하기
-- echarts graph 불러오기 및 style 속성 변경하기
-- ant-design donut graph 불러오기 및 grid
+- Main -지역 전체의 충전기 수
+- Seoul, Gyeonggi, Incheon -각 지역의 충전기수
+- Header -EV, cafe 의 페이지로 넘어가는 버튼 카페페이지는 만들어져 있으나 레이아웃은 없음
+- Sider -전체와 각 지역으로 넘어가는 버튼과 충전기 전체의 정보를 가지고 있음 
+
+## components
+- components 폴더의 내용은 작업내용 각각의 작은 단위
+- 재사용 components 들이 있음
+- EChartsPie.js 파일은 지역 충전기정보의 그래프를 ant => Echarts   변경 작업중 
