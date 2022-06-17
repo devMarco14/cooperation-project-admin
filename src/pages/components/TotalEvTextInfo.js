@@ -57,55 +57,55 @@ const TotalEvTextInfo = () => {
     <StyledEvInfo>
       <StyledEvCharger>
         <StyledInfo>전체 충전기:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>{dataList.total_charger.toLocaleString()}</StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>충전대기:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>{dataList.ready_charger.toLocaleString()}</StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>충전중:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>
             {dataList.charging_charger.toLocaleString()}
           </StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>점검중:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>
             {dataList.inspecting_charger.toLocaleString()}
           </StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>운영중지:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>
             {dataList.suspending_charger.toLocaleString()}
           </StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>통신이상:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>
             {dataList.communication_abnomal_charger.toLocaleString()}
           </StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
       <StyledEvCharger>
         <StyledInfo>상태미확인:</StyledInfo>
-        {dataList.total_charger !== 0 && (
+        {/* {dataList.total_charger !== 0 && (
           <StyledNumber>
             {dataList.not_confirmed_charger.toLocaleString()}
           </StyledNumber>
-        )}
+        )} */}
       </StyledEvCharger>
     </StyledEvInfo>
   );
