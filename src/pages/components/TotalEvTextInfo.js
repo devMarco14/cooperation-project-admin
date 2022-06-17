@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { initialData } from '../../model/data';
 
 const TotalEvTextInfo = () => {
-  const [dataList, setDataList] = useState(initialData);
+  // const [dataList, setDataList] = useState(initialData);
 
   // useEffect(() => {
   //   const fetchData = () => {
