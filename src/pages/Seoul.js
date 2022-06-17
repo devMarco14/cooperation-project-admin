@@ -9,7 +9,7 @@ const Seoul = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch('http://54.180.104.23:8000/evs/admin?regions=서울')
+      fetch('https://maze-server.ml/evs/admin?regions=서울')
         .then(res => res.json())
         .then(res => setSeoulDataList(res.results[0].chargers.count_of_status));
     };

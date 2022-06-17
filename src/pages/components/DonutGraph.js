@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Progress } from 'antd';
 import 'antd/dist/antd.css';
+// import EchartsPie from './EchartsPie';
 
 const DonutGraph = ({ data }) => {
   const {
@@ -16,6 +17,7 @@ const DonutGraph = ({ data }) => {
 
   return (
     <StyledGraphBox>
+      {/* <EchartsPie /> */}
       <StyledGraphText>
         <StyledGraph
           type="circle"

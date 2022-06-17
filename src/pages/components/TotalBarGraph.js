@@ -21,7 +21,7 @@ const TotalBarGraph = ({ data }) => {
   useEffect(() => {
     const fetchData = () => {
       fetch(
-        'http://54.180.104.23:8000/evs/admin?regions=서울&regions=경기&regions=인천'
+        'https://maze-server.ml/evs/admin?regions=서울&regions=경기&regions=인천'
       )
         .then(res => res.json())
         .then(res => {
