@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import ECharts from 'echarts-for-react';
-import PieGraphTitle from '../../PieGraphTitle';
 
 const TotalPieGraph = ({ data, seoul, gyeonggi, incheon }) => {
   const [graph, setGraph] = useState([[]]);
