@@ -2,7 +2,7 @@
 
 ## 메이즈 주식회사
 - admin page 작업
-- 
+
 ## 작업내용
 - Main -지역 전체의 충전기 수
 - Seoul, Gyeonggi, Incheon -각 지역의 충전기수
@@ -13,3 +13,8 @@
 - components 폴더의 내용은 작업내용 각각의 작은 단위
 - 재사용 components 들이 있음
 - EChartsPie.js 파일은 지역 충전기정보의 그래프를 ant => Echarts   변경 작업중 
+
+## error
+- setInterval 메모리 누수 메모리 누수에 대한 이해도가 부족해 해결을 못함
+- aws 배포시에 npm run build 가 안됨!
+- [Uploading 스크린샷 2022-06-17 오전 9.22.20.png…]()
