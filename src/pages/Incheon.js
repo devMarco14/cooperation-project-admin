@@ -7,20 +7,20 @@ import { initialData } from '../model/data';
 const Incheon = () => {
   const [incheonDataList, setIncheonDataList] = useState(initialData);
 
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //     fetch('https://maze-server.ml/evs/admin?regions=인천')
-  //       .then(res => res.json())
-  //       .then(res =>
-  //         setIncheonDataList(res.results[0].chargers.count_of_status)
-  //       );
-  //   };
+  useEffect(() => {
+    const fetchData = () => {
+      fetch('https://maze-server.ml/evs/admin?regions=인천')
+        .then(res => res.json())
+        .then(res =>
+          setIncheonDataList(res.results[0].chargers.count_of_status)
+        );
+    };
 
-  //   fetchData();
-  //   setInterval(() => {
-  //     fetchData();
-  //   }, 60000);
-  // }, []);
+    fetchData();
+    setInterval(() => {
+      fetchData();
+    }, 60000);
+  }, []);
   return (
     <StyledMain>
       <Sider />
